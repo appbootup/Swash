@@ -1,52 +1,53 @@
+# SWASH - Battery SWApping and SHaring System for E-Mobility
 
-**Note:** This is a **read-only mirror** of the formal [Gerrit](https://gerrit.hyperledger.org/r/#/admin/projects/fabric) repository,
-where active development is ongoing. Issue tracking is handled in [Jira](https://jira.hyperledger.org/secure/RapidBoard.jspa?projectKey=FAB&rapidView=5&view=planning)
+This repository contains the source code for blockchain based Battery SWApping and SHaring System named as SWASH by Robert Bosch Engineering and Business Solutions India Private Limited.
 
-## Status
+## What's going on here?
+> Background behind SWASH...
 
-This project is an _Active_ Hyperledger project. For more information on the history of this project see the [Fabric wiki page](https://wiki.hyperledger.org/projects/fabric.md#history). Information on what _Active_ entails can be found in
-the [Hyperledger Project Lifecycle document](https://wiki.hyperledger.org/community/project-lifecycle).
+* In the past week or two, Delhi has turned into a chimney. Doctors are actively advising us to leave the city to live a longer healthy life. All our efforts to curb this menace have been short of the mark so far. E-mobility has long been touted as the solution to control vehicular pollution. However, there are many challenges with implementing it like high costs and low ranges. Battery is the key problem area. One possible solution can be Battery swapping and sharing or the SWASH model. However, keeping a track of the battery remains a huge problem which we are trying to solve using Blockchain technology.
 
-[![Build Status](https://jenkins.hyperledger.org/buildStatus/icon?job=fabric-merge-x86_64)](https://jenkins.hyperledger.org/view/fabric/job/fabric-merge-x86_64/)
-[![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/955/badge)](https://bestpractices.coreinfrastructure.org/projects/955)
-[![Go Report Card](https://goreportcard.com/badge/github.com/hyperledger/fabric)](https://goreportcard.com/report/github.com/hyperledger/fabric)
-[![GoDoc](https://godoc.org/github.com/hyperledger/fabric?status.svg)](https://godoc.org/github.com/hyperledger/fabric)
-[![Documentation Status](https://readthedocs.org/projects/hyperledger-fabric/badge/?version=latest)](http://hyperledger-fabric.readthedocs.io/en/latest/?badge=latest)
 
-## Hyperledger fabric
+> How it will help the soceity ?
 
-The fabric is an implementation of blockchain technology, leveraging familiar
-and proven technologies. It is a modular architecture allowing pluggable
-implementations of various function. It features powerful container technology
-to host any mainstream language for smart contracts development.
+* It will help reducing cost of e-vehicles therby encouraging more people to go with e-Mobility solutions.This will also help in reducing CO2 footprint both directly and indirectly.
+* Battery manufacturing and disposal itself affects environment adversly and our solution will maximize battery life utilization.
+* Since this system is based on Blockchain, it brings more trust and openess in the whole environment.
+* People will pay for the Batteries based on their consumption. This enables a new path to improve usage of Electric vehicles among the people which inturn will reduce pollution and also helps to avoid the risk factors like fossil fuel depletion.
 
-## Documentation, Getting Started and Developer Guides
 
-This is a **read-only mirror** of the formal Gerrit repository, please visit our
-[online documentation](http://hyperledger-fabric.readthedocs.io/en/latest/) for
-information on getting started using and developing with the fabric, SDK and chaincode.
+> How the SWASH System works?
 
-## Contributing
+* Battery Swapping Stations: (BSS)
+	>It is a place where the user can go and swap the batteries once they get drained. It is similar to fuel stations and will be available at several places. In BSS, the charged batteries will be maintained and any registered user of this service can go and swap their batteries. Based on their consumption of energy from the battery, they will be charged. Here we introduce our own coin for this transactions called SWASH COINS.The user can pay cash and get these swash coins which in turn they will use this for their EV Battery swapping.
+* Initially the user has to pay a deposit amount to get the battery for the first time. After everytime he swaps the battery, his deposit amount should be maintained at a particular level. The user can topup their wallets with their money  which will be added as SWASH COINS.
+* At BSS each and every time before giving battery to the user,the battery details such as SoC, SoH, Energy Content etc., from the Battery Management System(BMS) will be read and updated in the Blockchain.
+* while receiving the battery from the user also, BSS employee will connect the battery to the CAN and read out the battery details from the BMS. The system has an algorithm which will fix the cost for the battery usage based on the consumption and time period.
+* This system also has Digital Identity verification using INDIACHAIN platform which is planned to be implemented. 
 
-We welcome contributions to the Hyperledger Project in many forms. There’s always plenty to do!
-Check [the documentation on how to contribute to this project](http://hyperledger-fabric.readthedocs.io/en/latest/CONTRIBUTING.html) for the full details.
 
-## Community
 
-[Hyperledger Community](https://www.hyperledger.org/community)
+> System Architecture
 
-[Hyperledger mailing lists and archives](http://lists.hyperledger.org/)
+![System Architecture]()
 
-[Hyperledger Chat](http://chat.hyperledger.org/channel/fabric)
+* The Battery and User details are stored in blockchain using Hyperledger Fabric Platform. It will have the SWASH COIN transaction and each battery's history.
+* In Web UI, features like provision to add new battery into the system, view battery history, topup user wallet etc.,
+* Python Based Solution to read battery parameters through CAN from the Battery Management System and communicate to the server.
+* Temporary SQL Database for data storing which enhances more security and used as a filter before storing things in the Blockchain.
+* This solution has a dedicated Web UI for the Battery Swapping stations and also a Android APP made for the users.
+* In App, Users can see the batteries and their details which they are currently having, provison to search nearby swapping stations, and also they can see their wallet status.
+* Theft Control is one of the main thing we concerned and implemented. In this solution, Aadhaar number of the user will be collected during sign up and they will be cross verified with the INDIACHAIN platform. And once the battery is marked as stolen, then the user can't charge/swap that battery in any station and we also have their aadhar number and we can catch them.
 
-[Hyperledger Fabric Issue Tracking](https://jira.hyperledger.org/secure/Dashboard.jspa?selectPageId=10104)
+>Future Implementations Planned:
 
-[Hyperledger Wiki](https://wiki.hyperledger.org/)
+* User can add driver(s) from their mobile app. Most of the time, the drivers will go for swapping the battery. So the provision will be given to the user to add driver(s) whom will be mapped under their name. 
+* Economy of Things: the batteries will be valued based on their worth by the system and each battery will have their own wallets.
+* Provision for sharing the battery which people own. They can share their unused batteries through this Battery Swapping stations and get rewarded/earned. This will reduce the wastage of EV Batteries when they are not used and  kept idle.
 
-[Hyperledger Code of Conduct](https://wiki.hyperledger.org/community/hyperledger-project-code-of-conduct)
+>About Us
 
-[Community Calendar](https://wiki.hyperledger.org/community/calendar-public-meetings)
+* We are engineers from Robert Bosch Engineering and Business Solutions India Pvt Ltd. Details about the individuals are given below.
 
-## License <a name="license"></a>
+	 * Yuvaraj Ravi(RBEI/EAC7) (<yuvaraj.ravi@in.bosch.com>)
 
-<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
