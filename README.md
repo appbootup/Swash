@@ -1,7 +1,8 @@
 # SWASH - Battery SWApping and SHaring System for E-Mobility
 
 This repository contains the source code for blockchain based Battery SWApping and SHaring System named as SWASH by Robert Bosch Engineering and Business Solutions India Private Limited.
-
+Chaincode is found here in the below link
+https://github.com/mano-ranjith/Swash/tree/test/examples/chaincode/go/mvp_chaincode
 ## What's going on here?
 > Background behind SWASH...
 
