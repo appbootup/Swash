@@ -32,6 +32,9 @@ https://github.com/mano-ranjith/Swash/tree/test/examples/chaincode/go/mvp_chainc
 
 ![System Architecture]()
 
+<img src="https://github.com/mano-ranjith/Swash/blob/test/image1.png"> 
+<img src="https://github.com/mano-ranjith/Swash/blob/test/image2.png">
+
 * The Battery and User details are stored in blockchain using Hyperledger Fabric Platform. It will have the SWASH COIN transaction and each battery's history.
 * In Web UI, features like provision to add new battery into the system, view battery history, topup user wallet etc.,
 * Python Based Solution to read battery parameters through CAN from the Battery Management System and communicate to the server.
