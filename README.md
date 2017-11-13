@@ -3,6 +3,10 @@
 This repository contains the source code for blockchain based Battery SWApping and SHaring System named as SWASH by Robert Bosch Engineering and Business Solutions India Private Limited.
 Chaincode is found here in the below link
 https://github.com/mano-ranjith/Swash/tree/test/examples/chaincode/go/mvp_chaincode
+To compile get the network running :
+1. cd examples/e2e_cli && ./network_setup.sh
+2. docker exec -t cli scripts/initializeNetwork.sh
+
 ## What's going on here?
 > Background behind SWASH...
 
