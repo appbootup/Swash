@@ -57,5 +57,6 @@ To compile get the network running :
 
 * We are engineers from Robert Bosch Engineering and Business Solutions India Pvt Ltd. Details about the individuals are given below.
 
-	 * Yuvaraj Ravi(RBEI/EAC7) (<yuvaraj.ravi@in.bosch.com>)
-
+	 * Dinesh Kumaran Nagarajan(RBEI/EAC7)(<dineshkumaran.nagarajan@in.bosch.com>)
+	 * Manoranjith A Ponraj(RBEI/EAC7)(<ponraj.manoranjitha@in.bosch.com>)
+	 * Dhruv Bhandula <bhandula.dhruv@in.bosch.com>
